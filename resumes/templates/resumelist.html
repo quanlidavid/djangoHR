@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if resume_list %}
+        <ul>
+            {%  for resume in resume_list %}
+                <li>
+                    {{ resume.resume_source }} {{ resume.job }} {{ resume.company }} {{ resume.active }}
+                </li>
+
+        </ul>
+    {% else %}
+        <p>No resumes are avaliable.</p>
+    {% endif %}
+
+
+{% endblock %}
